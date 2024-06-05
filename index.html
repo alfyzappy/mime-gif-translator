@@ -66,7 +66,7 @@
                 const response = await fetch(url);
                 const result = await response.json();
                 const gifUrl = result.data[0].images.original.url;
-                document.getElementById('gifContainer').innerHTML = `<img src="${gifUrl}" alt="Frenchmime GIF">`;
+                document.getElementById('gifContainer').innerHTML = `<img src="${gifUrl}" alt="mime clown GIF">`;
             } catch (error) {
                 console.error('Error fetching GIF:', error);
                 document.getElementById('gifContainer').innerHTML = '<p>Failed to fetch GIF. Please try again later.</p>';

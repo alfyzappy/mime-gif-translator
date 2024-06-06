@@ -59,14 +59,14 @@
     <script>
         async function fetchGif() {
             const text = document.getElementById('inputText').value;
-            const apiKey = 'rj7yVg92AOKS4xkrBCwDYRdTcE7C2gYl';
+            const apiKey = 'q8YYb6MURrEUYrsqtwacdXI8IxBG9Fdd';
             const url = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=miming&limit=1&offset=${Math.floor(Math.random() * 50)}`;
 
             try {
                 const response = await fetch(url);
                 const result = await response.json();
                 const gifUrl = result.data[0].images.original.url;
-                document.getElementById('gifContainer').innerHTML = `<img src="${gifUrl}" alt="mime clown GIF">`;
+                document.getElementById('gifContainer').innerHTML = `<img src="${gifUrl}" alt="Frenchmime GIF">`;
             } catch (error) {
                 console.error('Error fetching GIF:', error);
                 document.getElementById('gifContainer').innerHTML = '<p>Failed to fetch GIF. Please try again later.</p>';
